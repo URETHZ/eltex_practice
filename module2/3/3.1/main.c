@@ -9,9 +9,6 @@
 #include <sys/stat.h>
 #include "perms.h"
 
-/* pwd.h, grp.h и umask() есть только в POSIX (Linux, macOS, WSL).
-   В Windows (MinGW, Visual Studio) их нет - тогда владелец и группа
-   показываются числами. Можно задать вручную: -DHAVE_PWD_GRP=0 или 1. */
 #ifndef HAVE_PWD_GRP
 #  if defined(__unix__) || defined(__APPLE__)
 #    define HAVE_PWD_GRP 1
@@ -31,9 +28,7 @@
 typedef struct {
     unsigned mode;
     int defined;
-} State;
-
-/* =====================  ВВОД И ПРОВЕРКА  ===================== */
+} State; 
 
 /* Читает строку, убирает пробелы по краям. 0 - конец ввода (EOF). */
 static int read_line(const char *prompt, char *buf, size_t size)
@@ -100,7 +95,6 @@ static int read_token(const char *prompt, char *buf, size_t size)
     }
 }
 
-/* =====================  ВЫВОД  ===================== */
 
 static void print_mode(unsigned mode)
 {
@@ -141,11 +135,9 @@ static unsigned current_umask(void)
     umask(m);
     return (unsigned)m;
 #else
-    return 022;                          /* типичное значение, если umask недоступен */
+    return 022; // типичное значение, если umask недоступен 
 #endif
 }
-
-/* =====================  ПУНКТЫ МЕНЮ  ===================== */
 
 static int action_enter(State *st)
 {
@@ -223,8 +215,6 @@ static int action_modify(State *st)
     print_mode(mode);
     return 1;
 }
-
-/* =====================  main  ===================== */
 
 int main(void)
 {

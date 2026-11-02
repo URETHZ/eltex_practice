@@ -31,11 +31,10 @@ typedef struct {
     long long size;
 } FileInfo;
 
-/* ---- Разбор ---- */
 /* Автоматически определяет запись: только цифры - восьмеричная, иначе буквенная. */
 PermStatus perm_parse(const char *text, unsigned *mode);
-PermStatus perm_parse_octal(const char *text, unsigned *mode);      /* "755", "4755", "0644" */
-PermStatus perm_parse_symbolic(const char *text, unsigned *mode);   /* "rwxr-xr-x" или "-rwxr-xr-x" */
+PermStatus perm_parse_octal(const char *text, unsigned *mode);
+PermStatus perm_parse_symbolic(const char *text, unsigned *mode);
 
 /* ---- Модификация, подобная chmod ----
    expr: "u+x,g-w,o=r", "a+rw", "+x", "g=u", "u+s" или просто "755".
@@ -54,4 +53,4 @@ int perm_stat(const char *path, FileInfo *info);
 
 const char *perm_status_message(PermStatus status);
 
-#endif /* PERMS_H */
+#endif

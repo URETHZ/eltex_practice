@@ -37,8 +37,6 @@ static int all_digits(const char *s)
     return 1;
 }
 
-/* ---------- разбор ---------- */
-
 PermStatus perm_parse_octal(const char *text, unsigned *mode)
 {
     if (!text || text[0] == '\0') return PERM_ERR_EMPTY;
