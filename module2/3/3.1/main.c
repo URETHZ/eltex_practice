@@ -127,7 +127,7 @@ static void print_owner_and_group(const FileInfo *fi, char *owner, size_t osize,
 #endif
 }
 
-/* Текущий umask процесса (нужен для команд вида "+x" без u/g/o/a) */
+/* Текущий umask процесса */
 static unsigned current_umask(void)
 {
 #if HAVE_PWD_GRP
