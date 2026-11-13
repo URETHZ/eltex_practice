@@ -1,0 +1,10 @@
+Broker: запущен, qid=0, pid=7505
+Broker: подписка pid=7508 на 'sports'
+Broker: подписка pid=7509 на 'news'
+Broker: подписка pid=7509 на 'sports'
+Broker: сообщение по теме 'sports' разослано
+Broker: сообщение по теме 'sports' разослано
+Broker: сообщение по теме 'sports' разослано
+Broker: сообщение по теме 'sports' разослано
+Broker: рассылка SIGINT подписчикам и издателям
+Broker: очередь удалена, завершение.
