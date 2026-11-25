@@ -1,0 +1,6 @@
+# Собранные файлы
+*.o
+*.d
+chat
+producer
+consumer
