@@ -1,8 +1,0 @@
-Subscriber: запущен, pid=7508, тем: 1
-Subscriber: подписан на 'sports'
-[Subscriber 7508] topic='sports' payload='message #1 from publisher 7511 (topic=sports)'
-[Subscriber 7508] topic='sports' payload='message #2 from publisher 7511 (topic=sports)'
-[Subscriber 7508] topic='sports' payload='message #3 from publisher 7511 (topic=sports)'
-[Subscriber 7508] topic='sports' payload='message #4 from publisher 7511 (topic=sports)'
-Subscriber: очередь удалена, выход.
-Subscriber: завершение, pid=7508
